@@ -1,0 +1,74 @@
+Classes
+
+block {
+    location
+    color
+}
+
+piece {
+    extends block
+
+    shape
+    rotation
+    isPlayerControlled
+    location of all blocks in piece
+}
+
+collision for each piece while player is moving
+    -before rotation, check if all future positions of piece after rotation are empty/valid
+    -before falling 1 unit, ^
+
+Once falling has stopped, take control away from player
+
+check if any rows that the piece is occupying are complete
+
+Erase row(s), tally score, move location of all blocks above the row down 1 unit
+
+Generate new piece, give control back to player
+
+
+Maybe the render logic just looks at the color and location of every block and renders each frame that way?
+
+
+
+
+
+rotate right:
+
+quadrant 1
+
+x , y
+
+2
+
+
+
+3
+
+
+4
+
+
+
+To-do:
+    DONE color (GET COLOR FROM BLOCK NOT PIECE)
+    DONE block types
+    ON-HOLD holding down arrow/turn keys
+    DONE collision with side of screen
+
+    DONE making block inactive
+
+    DONE collision with other blocks (make master list be of BLOCKS (NOT PIECES))
+    
+    DONE instancing new block
+
+    DONE removing rows
+    
+    DONE Game over
+    DONE Keeping score
+
+    ramp falling speed as score increases
+    Showing next block
+
+    Saving blocks
+
